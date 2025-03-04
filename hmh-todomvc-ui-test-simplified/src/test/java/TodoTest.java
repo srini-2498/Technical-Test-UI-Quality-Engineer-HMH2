@@ -38,7 +38,7 @@ public class TodoTest {
 
         WebElement todoLabel = driver.findElement(By.cssSelector(".todo-list li label"));
         WebElement todoItem = driver.findElement(By.cssSelector(".todo-list li"));
-((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", todoLabel);
 //        driver.executeScript("arguments[0].click();", todoLabel);
         WebElement editInput = todoItem.findElement(By.className("edit"));
         editInput.clear();
