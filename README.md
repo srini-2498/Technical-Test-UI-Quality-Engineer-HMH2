@@ -19,6 +19,7 @@ https://github.com/srini-2498/Technical-Test-UI-Quality-Engineer-HMH2.git
 3. Open Command Prompt
 •	First Enter Command 
 git clone https://github.com/srini-2498/Technical-Test-UI-Quality-Engineer-HMH2.git
+
 •	As I saved my project in D: so change path to d:
 •	After that in command prompt enter cd hmh-todomvc-ui-test-simplified
 •	Again enter cd hmh-todomvc-ui-test-simplified
