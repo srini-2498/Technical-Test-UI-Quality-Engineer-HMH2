@@ -15,6 +15,7 @@ https://github.com/srini-2498/Technical-Test-UI-Quality-Engineer-HMH2.git
       pom.xml
       Testng File
       \src\test\java and TodoTest.java contains main part of code.
+
 3. Open Command Prompt
 •	First Enter Command 
 git clone https://github.com/srini-2498/Technical-Test-UI-Quality-Engineer-HMH2.git
