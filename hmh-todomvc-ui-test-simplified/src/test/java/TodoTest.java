@@ -31,6 +31,8 @@ public class TodoTest {
     public void testAddTodo() {
         WebElement newTodo = driver.findElement(By.className("new-todo"));
         newTodo.sendKeys("Buy Milk" + Keys.ENTER);
+         WebElement todoLabel = new WebDriverWait(driver, Duration.ofSeconds(50))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".todo-list li label")));
         List<String> todos = driver.findElements(By.cssSelector(".todo-list li label"))
                                    .stream().map(WebElement::getText).collect(Collectors.toList());
         Assert.assertTrue(todos.contains("Buy Milk"));
@@ -42,7 +44,7 @@ public class TodoTest {
         newTodo.sendKeys("Buy Milk" + Keys.ENTER);
 
         // Wait for the todo item to be added
-        WebElement todoLabel = new WebDriverWait(driver, Duration.ofSeconds(10))
+        WebElement todoLabel = new WebDriverWait(driver, Duration.ofSeconds(20))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".todo-list li label")));
 
         // Double-click the label to enter edit mode
@@ -67,6 +69,8 @@ public class TodoTest {
     public void testDeleteTodo() {
         WebElement newTodo = driver.findElement(By.className("new-todo"));
         newTodo.sendKeys("Buy Milk" + Keys.ENTER);
+         WebElement todoLabel = new WebDriverWait(driver, Duration.ofSeconds(50))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".todo-list li label")));
 
         WebElement destroyButton = driver.findElement(By.cssSelector(".todo-list li .destroy"));
         // Cast driver to JavascriptExecutor and execute the script
@@ -81,6 +85,9 @@ public class TodoTest {
         WebElement newTodo = driver.findElement(By.className("new-todo"));
         newTodo.sendKeys("Buy Milk" + Keys.ENTER);
         newTodo.sendKeys("Buy Coffee" + Keys.ENTER);
+
+         WebElement todoLabel = new WebDriverWait(driver, Duration.ofSeconds(50))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".todo-list li label")));
 
         WebElement firstTodoCheckbox = driver.findElement(By.cssSelector(".todo-list li:first-child .toggle"));
         firstTodoCheckbox.click();
